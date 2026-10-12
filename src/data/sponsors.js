@@ -219,6 +219,6 @@ export const SPONSORS = [
     name: '八木八',
     file: 'sponsor-40.png',
     url: '',
-    amountYen: null, // 金額が分かったらここに数値を入れるだけで表示されます
+    amountYen: 5000, // 金額が分かったらここに数値を入れるだけで表示されます
   },
 ]
