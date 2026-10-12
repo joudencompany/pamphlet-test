@@ -1,0 +1,244 @@
+/* src/components/SponsorSection.css */
+
+.sponsor-wall {
+  background: #ffffff;
+  color: #222222;
+  padding: 56px 16px 64px;
+}
+
+.sponsor-wall__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sponsor-wall__label {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: #6c3fc7;
+}
+
+.sponsor-wall__title {
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  color: #222222;
+}
+
+.sponsor-wall__lead {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+.sponsor-wall__note {
+  margin: 40px 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: #888888;
+}
+
+/* ── 区分ごとのブロック ── */
+.sponsor-tier {
+  margin-top: 48px;
+  /* 既定値（スマホ）。区分ごとに下で上書きします */
+  --cols: 3;
+  --cell-h: 56px;
+  --gap-x: 12px;
+  --gap-y: 16px;
+}
+
+.sponsor-tier__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 28px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-align: center;
+  color: #222222;
+}
+
+.sponsor-tier__title::before,
+.sponsor-tier__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #dddddd;
+}
+
+/* 画面幅に応じて列数を変える。最後の行が余ったら中央に寄せる */
+.sponsor-tier__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-y) var(--gap-x);
+}
+
+.sponsor-tier__item {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap-x)) / var(--cols));
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── ロゴ1つ分（枠・影・背景色なし） ── */
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--cell-h);
+  padding: 6px 8px;
+  background: #ffffff;
+  border: 0;
+  box-shadow: none;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sponsor-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 縦横比を維持 */
+  object-position: center;
+  transform: scale(var(--logo-scale, 1));
+}
+
+.sponsor-logo--link {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.sponsor-logo--link:hover {
+  opacity: 0.65;
+}
+
+.sponsor-logo--link:focus-visible {
+  outline: 2px solid #6c3fc7;
+  outline-offset: 2px;
+}
+
+/* ── SPECIAL：最も大きく。スマホ1列 ── */
+.sponsor-tier--special {
+  --cols: 1;
+  --cell-h: 120px;
+  --gap-x: 16px;
+  --gap-y: 20px;
+}
+
+/* ── MAIN：スマホ2列 ── */
+.sponsor-tier--main {
+  --cols: 2;
+  --cell-h: 84px;
+  --gap-x: 16px;
+  --gap-y: 20px;
+}
+
+/* ── SPONSORS：スマホ3列 ── */
+.sponsor-tier--sponsor {
+  --cols: 3;
+  --cell-h: 60px;
+  --gap-x: 12px;
+  --gap-y: 16px;
+}
+
+/* ── SUPPORTERS：スマホ3列 ── */
+.sponsor-tier--supporter {
+  --cols: 3;
+  --cell-h: 52px;
+  --gap-x: 12px;
+  --gap-y: 14px;
+}
+
+/* ── タブレット ── */
+@media (min-width: 600px) {
+  .sponsor-wall {
+    padding: 72px 24px 80px;
+  }
+
+  .sponsor-wall__title {
+    font-size: 32px;
+  }
+
+  .sponsor-tier--main {
+    --cols: 3;
+    --cell-h: 92px;
+  }
+
+  .sponsor-tier--sponsor {
+    --cols: 4;
+    --cell-h: 66px;
+  }
+
+  .sponsor-tier--supporter {
+    --cols: 5;
+    --cell-h: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sponsor-tier {
+    --gap-x: 24px;
+    --gap-y: 24px;
+  }
+
+  .sponsor-tier--special {
+    --cols: 3;
+    --cell-h: 150px;
+    --gap-x: 32px;
+  }
+}
+
+/* ── PC ── */
+@media (min-width: 900px) {
+  .sponsor-tier--main {
+    --cols: 4;
+    --cell-h: 100px;
+  }
+
+  .sponsor-tier--sponsor {
+    --cols: 5;
+    --cell-h: 72px;
+  }
+
+  .sponsor-tier--supporter {
+    --cols: 6;
+    --cell-h: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sponsor-tier--special {
+    --cell-h: 180px;
+  }
+
+  .sponsor-tier--main {
+    --cols: 5;
+    --cell-h: 108px;
+  }
+
+  .sponsor-tier--sponsor {
+    --cols: 6;
+    --cell-h: 76px;
+  }
+
+  .sponsor-tier--supporter {
+    --cols: 7;
+    --cell-h: 64px;
+  }
+}

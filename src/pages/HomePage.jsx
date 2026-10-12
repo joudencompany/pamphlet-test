@@ -2,16 +2,8 @@
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import terrabalImg from '../assets/terrabal.jpg'
-import terrabalImg2 from '../assets/terrabal2.jpg'
 import chuoImg from '../assets/chuo.png'
-import seikyou from '../assets/seikyou.png'
-import konntakuto from '../assets/konntakuto.png'
-import ouesu from '../assets/ouesu.png'
 import campusmap from '../assets/campusmap.png'
-import kyouseisika from '../assets/kyouseisika.png'
-import TKU1 from '../assets/TKU1.png'
-import TKU2 from '../assets/TKU2.png'
 import tentmapImg from '../assetstent/tentmap.png'
 import tentmapImg2 from '../assetstent2/tentmap2.png'
 import okunaimapImg from '../assetsokunai/okunaimap.png'
@@ -29,13 +21,8 @@ import hougaku from '../assets/hougaku.png'
 import chairImg from '../assets/chair.jpg'
 import viceBabaImg from '../assets/vice-baba.jpg'
 import viceNarasakiImg from '../assets/vice-narasaki.jpg'
-import meijikmb from '../assets/meijikmb.png'
-import pikusuraunnji from '../assets/pi-kusuraunnji.png'
 import konntesuto from '../assets/kumadaikonntesuto.png'
 import konntesuto2 from '../assets/kumadaikonntesuto2.png'
-import mainabi from '../assets/mainabi.png'
-import triumph from '../assets/triumph.png'
-import kaikatu from '../assets/kaikatu.png'
 import sigmaGrandprixImg from '../assets/sigma-grandprix.png'
 import ouendanLeaderImg from '../assets/ouendan-leader.png'
 import cheerImg from '../assets/cheer.png'
@@ -61,8 +48,7 @@ import kotakiDay3Img from '../assets/kotaki-day3.png'
 import jazzDay3Img from '../assets/jazz-day3.png'
 import candleDay3Img from '../assets/candle-day3.png'
 import finaleDay3Img from '../assets/finale-day3.png'
-import benngosi from '../assets/benngosi.png'
-import AdvertisementSection from '../components/AdvertisementSection'
+import SponsorSection from '../components/SponsorSection'
 
 /* ── データ ── */
 const DAYS = [
@@ -636,24 +622,7 @@ useEffect(() => {
           </button>
         </div>
       </section>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：テラバル自動車学校
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://terrabal.co.jp" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={terrabalImg} alt="テラバル自動車学校" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：テラバル自動車学校2
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://terrabal.co.jp" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={terrabalImg2} alt="テラバル自動車学校" className="ad-banner__img" />
-        </a>
-      </div>
+
 {/* ── ご協賛企業一覧 ── */}
 <section className="section sponsors" id="sponsors">
   <div className="container">
@@ -844,24 +813,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：生協
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://coop.kyushu-bauc.or.jp/kumamoto-u/index.html" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={seikyou} alt="生協" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：オーエス
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://www.nohara-gr.com/admin-os/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={ouesu} alt="オーエス" className="ad-banner__img" />
-        </a>
-      </div>
+
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           メインテーマ
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
@@ -941,69 +893,6 @@ useEffect(() => {
           <img src={campusmap} alt="黒髪キャンパス" className="ad-banner__img" />
         </a>
       </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：KMB
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label"></span>
-        <a href="https://www.kmbiologics.com/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={meijikmb} alt="KMB" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：熊本駅矯正歯科クリニック
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label"></span>
-        <a href="https://www.kumamoto-ekimae-kc.com/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={kyouseisika} alt="熊本駅矯正歯科クリニック" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：ピークスラウンジ
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://www.instagram.com/peacs_lounge/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={pikusuraunnji} alt="ピークスラウンジ" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：TKU1
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label"></span>
-        <a href="https://www.tku.co.jp/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={TKU1} alt="TKU1" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：TKU2
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label"></span>
-        <a href="https://www.tku.co.jp/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={TKU2} alt="TKU2" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：マイナビ
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://job.mynavi.jp/2028/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={mainabi} alt="マイナビ" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：triumph
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://www.triumph98.com/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={triumph} alt="triumph" className="ad-banner__img" />
-        </a>
-      </div>
 
 {/* ── タイムテーブル ── */}
 <section className="section timetable" id="timetable">
@@ -1063,24 +952,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：快活
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://www.kaikatsu.jp/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={kaikatu} alt="快活" className="ad-banner__img" />
-        </a>
-      </div>
-      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          広告：弁護士
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div className="ad-banner">
-        <span className="ad-banner__label">広告</span>
-        <a href="https://yoyaku.kumaben.or.jp/guide" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
-          <img src={benngosi} alt="弁護士" className="ad-banner__img" />
-        </a>
-      </div>
+
       {/* ── 出店・サークル ── */}
       <section className="section circles" id="circles-tent">
         <div className="container">
@@ -1115,9 +987,6 @@ useEffect(() => {
           </div>
         </div>
       </section>
-
-{/* ── ご協賛広告一覧 ── */}
-<AdvertisementSection />
 
       {/* ── 出店・サークル ── */}
       <section className="section circles" id="circles-okunai">
@@ -1258,6 +1127,10 @@ useEffect(() => {
     </div>
   </div>
 </section> 
+
+      {/* ── ご協賛企業ロゴ一覧 ── */}
+      <SponsorSection />
+
       {/* ── フッター ── */}
       <footer className="footer">
         <div className="footer__sigma">Σ</div>
