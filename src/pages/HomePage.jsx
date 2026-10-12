@@ -623,75 +623,6 @@ useEffect(() => {
         </div>
       </section>
 
-{/* ── ご協賛企業一覧 ── */}
-<section className="section sponsors" id="sponsors">
-  <div className="container">
-    <div className="section-label">Sponsors</div>
-    <h2 className="section-title">ご協賛企業一覧</h2>
-    <p className="sponsors__lead">
-      第十五回紫熊祭 公式パンフレット広告ご協賛企業一覧
-    </p>
-    <ul className="sponsors__list">
-      {[
-        'hair mode RITZ',
-        'JAグループ熊本くまもと売れる米づくり推進本部',
-        'KM バイオロジクス 株式会社',
-        'Pop Town Project',
-        '居酒屋 ひゃくしょう茶屋 駕町店',
-        '医療法人 熊本駅前矯正歯科クリニック',
-        '医療法人社団 大塚メディカル八景水谷クリニック',
-        '医療法人 フォーチュンなかがわ整形',
-        '医療法人 山部会 くまもと成城病院',
-        '学校法人 九州測量専門学校',
-        '株式会社 AIKASU',
-        '株式会社 Evoliv',
-        '株式会社 KDS 熊本ドライビングスクール',
-        '株式会社 think garbage',
-        '株式会社 UNICS',
-        '株式会社 あつまるホールディングス',
-        '株式会社 快活フロンティア',
-        '株式会社 キューネット',
-        '株式会社 秀拓',
-        '株式会社 中央自動車学校',
-        '株式会社 寺原自動車学校',
-        '株式会社 テレビ熊本',
-        '株式会社 トライアンフ',
-        '株式会社 ヒライ',
-        '株式会社 ピークスキャリア',
-        '株式会社 ボウリング王国スポルト 熊本店',
-        '株式会社 マイナビ',
-        '株式会社 明和不動産',
-        '株式会社 ライブプラザパートナーズ FA 営業部',
-        '上熊本三陽自動車学校',
-        '熊本県弁護士会',
-        '熊本大学生活協同組合',
-        '熊本電気鉄道株式会社',
-        '熊本トヨペット株式会社',
-        'コンタクトのアイシティ 下通り店',
-        'しまだ内科クリニック',
-        '杉島龍市土地家屋調査士事務所',
-        'スパイスアロマ',
-        '税理士法人 近代経営',
-        '八木八',
-        '有限会社 オー・エス収集センター',
-        '有限会社 サンエンタープライズカラオ毛 花畑公民館',
-        'よしむら産婦人科皮ふ科クリニック',
-      ].map((name) => (
-        <li className="sponsors__item" key={name}>
-          {name}
-        </li>
-      ))}
-    </ul>
-    <p className="sponsors__note">（五十音順、敬称略）</p>
-    <div className="sponsors__thanks">
-      <h3 className="sponsors__thanks-title">御礼</h3>
-      <p>
-        第十五回紫熊祭を開催するにあたり、多大なご協賛を賜り誠にありがとうございました。
-        皆様のご支援によりまして円滑な運営ができますこと、厚く御礼申し上げます。
-      </p>
-    </div>
-  </div>
-</section>
 {/* ── 委員長挨拶 ── */}
 <section className="section greeting" id="greeting">
   <div className="container">
@@ -1130,6 +1061,76 @@ useEffect(() => {
 
       {/* ── ご協賛企業ロゴ一覧 ── */}
       <SponsorSection />
+
+{/* ── ご協賛企業一覧 ── */}
+<section className="section sponsors" id="sponsors">
+  <div className="container">
+    <div className="section-label">Sponsors</div>
+    <h2 className="section-title">ご協賛企業一覧</h2>
+    <p className="sponsors__lead">
+      第十五回紫熊祭 公式パンフレット広告ご協賛企業一覧
+    </p>
+    <ul className="sponsors__list">
+      {[
+        'hair mode RITZ',
+        'JAグループ熊本くまもと売れる米づくり推進本部',
+        'KM バイオロジクス 株式会社',
+        'Pop Town Project',
+        '居酒屋 ひゃくしょう茶屋 駕町店',
+        '医療法人 熊本駅前矯正歯科クリニック',
+        '医療法人社団 大塚メディカル八景水谷クリニック',
+        '医療法人 フォーチュンなかがわ整形',
+        '医療法人 山部会 くまもと成城病院',
+        '学校法人 九州測量専門学校',
+        '株式会社 AIKASU',
+        '株式会社 Evoliv',
+        '株式会社 KDS 熊本ドライビングスクール',
+        '株式会社 think garbage',
+        '株式会社 UNICS',
+        '株式会社 あつまるホールディングス',
+        '株式会社 快活フロンティア',
+        '株式会社 キューネット',
+        '株式会社 秀拓',
+        '株式会社 中央自動車学校',
+        '株式会社 寺原自動車学校',
+        '株式会社 テレビ熊本',
+        '株式会社 トライアンフ',
+        '株式会社 ヒライ',
+        '株式会社 ピークスキャリア',
+        '株式会社 ボウリング王国スポルト 熊本店',
+        '株式会社 マイナビ',
+        '株式会社 明和不動産',
+        '株式会社 ライブプラザパートナーズ FA 営業部',
+        '上熊本三陽自動車学校',
+        '熊本県弁護士会',
+        '熊本大学生活協同組合',
+        '熊本電気鉄道株式会社',
+        '熊本トヨペット株式会社',
+        'コンタクトのアイシティ 下通り店',
+        'しまだ内科クリニック',
+        '杉島龍市土地家屋調査士事務所',
+        'スパイスアロマ',
+        '税理士法人 近代経営',
+        '八木八',
+        '有限会社 オー・エス収集センター',
+        '有限会社 サンエンタープライズカラオ毛 花畑公民館',
+        'よしむら産婦人科皮ふ科クリニック',
+      ].map((name) => (
+        <li className="sponsors__item" key={name}>
+          {name}
+        </li>
+      ))}
+    </ul>
+    <p className="sponsors__note">（五十音順、敬称略）</p>
+    <div className="sponsors__thanks">
+      <h3 className="sponsors__thanks-title">御礼</h3>
+      <p>
+        第十五回紫熊祭を開催するにあたり、多大なご協賛を賜り誠にありがとうございました。
+        皆様のご支援によりまして円滑な運営ができますこと、厚く御礼申し上げます。
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* ── フッター ── */}
       <footer className="footer">
