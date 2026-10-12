@@ -587,7 +587,7 @@ useEffect(() => {
           <span className="nav__logo-sigma">Σ</span> 紫熊祭
         </div>
         <nav className={`nav__links ${menuOpen ? 'open' : ''}`}>
-          {[['挨拶','greeting'],['諸注意','notice'],['タイムテーブル','timetable'],['出店・サークル（テント）','circles-tent'],['出店・サークル（屋内）','circles-okunai'],['スタンプ','stamp'],['アクセス','access'],].map(([label, id]) => (
+          {[['挨拶','greeting'],['諸注意','notice'],['タイムテーブル','timetable'],['出店・サークル（テント）','circles-tent'],['出店・サークル（屋内）','circles-okunai'],['スタンプ','stamp'],['ご協賛企業','sponsors'],['アクセス','access'],].map(([label, id]) => (
             <button key={id} onClick={() => scrollTo(id)}>{label}</button>
           ))}
         </nav>
