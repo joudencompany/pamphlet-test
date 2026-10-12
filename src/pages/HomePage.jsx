@@ -49,6 +49,8 @@ import jazzDay3Img from '../assets/jazz-day3.png'
 import candleDay3Img from '../assets/candle-day3.png'
 import finaleDay3Img from '../assets/finale-day3.png'
 import SponsorSection from '../components/SponsorSection'
+import terrabalImg from '../assets/terrabal.jpg'
+import terrabalImg2 from '../assets/terrabal2.jpg'
 
 /* ── データ ── */
 const DAYS = [
@@ -395,8 +397,7 @@ const STAGE_COLOR = {
   'こども広場':     '#2a8c4a',
   'こども広場＋α':  '#2a8c4a',
 }
-/* ── アンカー広告データ（中央自動車学校のみ） ── */
-const ANCHOR_AD = { img: chuoImg, alt: '中央自動車学校', url: 'https://chuo-ds.com/' }
+
 export default function HomePage() {
   const [adVisible, setAdVisible] = useState(false)
   const [adShown, setAdShown] = useState(false)
@@ -579,17 +580,7 @@ useEffect(() => {
           )}
         </div>
       )}
-      {/* ── インタースティシャル広告 ── */}
-      {adVisible && (
-        <div className="ad-interstitial" onClick={() => { setAdVisible(false); setAdShown(true) }}>
-          <div className="ad-interstitial__box" onClick={e => e.stopPropagation()}>
-            <button className="ad-interstitial__close" onClick={() => { setAdVisible(false); setAdShown(true) }}>✕</button>
-            <a href="https://chuo-ds.com/" target="_blank" rel="noopener noreferrer">
-              <img src={chuoImg} alt="中央自動車学校" className="ad-interstitial__img" />
-            </a>
-          </div>
-        </div>
-      )}
+
       {/* ── ナビ ── */}
       <header className="nav">
         <div className="nav__logo" onClick={() => scrollTo('hero')}>
@@ -622,6 +613,34 @@ useEffect(() => {
           </button>
         </div>
       </section>
+
+      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+          広告：テラバル自動車学校
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div className="ad-banner">
+        <span className="ad-banner__label">広告</span>
+        <a href="https://terrabal.co.jp" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
+          <img src={terrabalImg} alt="テラバル自動車学校" className="ad-banner__img" />
+        </a>
+      </div>
+      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+          広告：テラバル自動車学校2
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div className="ad-banner">
+        <span className="ad-banner__label">広告</span>
+        <a href="https://terrabal.co.jp" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
+          <img src={terrabalImg2} alt="テラバル自動車学校" className="ad-banner__img" />
+        </a>
+      </div>
+      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+          広告：中央自動車学校
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div className="ad-banner">
+        <span className="ad-banner__label">広告</span>
+        <a href="https://chuo-ds.com/" target="_blank" rel="noopener noreferrer" className="ad-banner__link">
+          <img src={chuoImg} alt="中央自動車学校" className="ad-banner__img" />
+        </a>
+      </div>
 
 {/* ── 委員長挨拶 ── */}
 <section className="section greeting" id="greeting">
@@ -1179,16 +1198,6 @@ useEffect(() => {
             </div>
           )}
           <p className="tt-bubble__comment">{bubble.ev.comment || '詳細は準備中です。'}</p>
-        </div>
-      )}
-      {/* ── アンカー広告（ドラッグ可能・閉じる） ── */}
-      {!adClosed && (
-        <div className={`anchor-ad ${isDraggingAd ? 'is-dragging' : ''}`} style={{ right: adPos.right, bottom: adPos.bottom }} onMouseDown={onAdPointerDown} onTouchStart={onAdPointerDown}>
-          <button type="button" className="anchor-ad__close" onClick={e => { e.stopPropagation(); setAdClosed(true) }} onMouseDown={e => e.stopPropagation()} onTouchStart={e => e.stopPropagation()} aria-label="閉じる">✕</button>
-          <span className="anchor-ad__label">広告</span>
-          <a href={ANCHOR_AD.url} target="_blank" rel="noopener noreferrer" className="anchor-ad__link" onClick={e => hasDraggedRef.current && e.preventDefault()} draggable={false}>
-            <img src={ANCHOR_AD.img} alt={ANCHOR_AD.alt} className="anchor-ad__img" draggable={false} />
-          </a>
         </div>
       )}
 
